@@ -25,7 +25,7 @@ const Dashboard = () => {
       },
       {
          name: "POST /us-east-1",
-         url: "/us-east-1/embed",
+         url: "/us-east-1/api/embed",
          method: "POST",
          body: {
             model: "nomic-embed-text",
@@ -34,12 +34,12 @@ const Dashboard = () => {
       },
       {
          name: "GET /us-west-2",
-         url: "/us-west-2/tags",
+         url: "/us-west-2/api/tags",
          method: "GET",
       },
       {
          name: "POST /us-west-2",
-         url: "/us-west-2/embed",
+         url: "/us-west-2/api/embed",
          method: "POST",
          body: {
             model: "nomic-embed-text",
