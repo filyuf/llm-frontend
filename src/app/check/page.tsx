@@ -17,15 +17,17 @@ const Dashboard = () => {
    const userData = session?.user as any;
    const uid = userData?.id;
 
+   const API_BASE_URL = "https://0mij0qmz59.execute-api.us-east-1.amazonaws.com/production";
+
    const endpoints: Endpoint[] = [
       {
          name: "GET /us-east-1",
-         url: "/us-east-1/api/tags",
+         url: `${API_BASE_URL}/us-east-1/api/tags`,
          method: "GET",
       },
       {
          name: "POST /us-east-1",
-         url: "/us-east-1/api/embed",
+         url: `${API_BASE_URL}/us-east-1/api/embed`,
          method: "POST",
          body: {
             model: "nomic-embed-text",
@@ -34,12 +36,12 @@ const Dashboard = () => {
       },
       {
          name: "GET /us-west-2",
-         url: "/us-west-2/api/tags",
+         url: `${API_BASE_URL}/us-west-2/api/tags`,
          method: "GET",
       },
       {
          name: "POST /us-west-2",
-         url: "/us-west-2/api/embed",
+         url: `${API_BASE_URL}/us-west-2/api/embed`,
          method: "POST",
          body: {
             model: "nomic-embed-text",
